@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nostaljik Gazete Reklamları</title>
+
+    <meta property="og:title" content="Nostaljik Gazete Reklamları" />
+    <meta property="og:description" content="'30, '40 ve '50'lerden gazete reklamları." />
+    <meta property="og:image" content="https://i.ibb.co/djDyxnn/img.png" />
+    <meta property="og:url" content="https://yusufb.github.io/gazete" />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Nostaljik Gazete Reklamları">
+    <meta name="twitter:description" content="'30, '40 ve '50'lerden gazete reklamları.">
+    <meta name="twitter:image" content="https://i.ibb.co/djDyxnn/img.png">
+
+    <link rel="stylesheet" href="bulma.min.css">
+    <link rel="stylesheet" href="newsad.css?v=1">
+
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png"> 
+    <link rel="icon" href="favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Glory:wght@300&family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF9SNJJVTN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VF9SNJJVTN', {
+          send_page_view: false
+        });
+    </script>
+</head>
+<body>
+    <section class="section has-text-centered pb-0 mb-5">
+        <h1 class="title is-1 mb-1">Nostaljik Gazete Reklamları</h1>
+        <h6 class="title is-6 is-italic">'30, '40 ve '50'lerden gazete reklamları</h6> 
+    </section>
+    <section class="section py-0 mb-5">
+        <div id="cats" class="tags is-centered">
+            <!-- <span class="tag"><a href="#Cat">#Cat</a></span> -->
+        </div>
+        <div class="has-text-centered">
+            <a onclick="randomContent(); gaTrack(1, 'top_random', '');"><span id="rand-button" class="tag is-large is-link is-light has-text-weight-semibold">RASTGELE</span></a>
+        </div>
+    </section>
+    <section class="section py-0 my-0 is-hidden" id="detail-view">
+        <section class="section pt-0">
+            <div class="columns body-columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div id="detail-card" class="card has-text-centered">
+                        <div class="header">
+                            <div class="media">
+                                <div class="media-content m-3">
+                                    <p class="title is-4" id="detail-title">Detail Title</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-image">
+                            <figure class="image is-justify-content-center is-flex mt-1"> <!-- <figure class="image is-4by3"> -->
+                                <img id="detail-img" alt="">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="mb-0">
+                                    <strong id="detail-paper">Detail Paper</strong>
+                                </p>
+                                <span id="detail-year">Detail Year</span>
+                            </div>
+                            <div class="content">
+                                <span class="tag">
+                                    <a id="detail-cat" href="#">#Detail Cat</a>
+                                </span>
+                            </div>                            
+                            <div class="content" id="detail-tweet">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section pb-1">
+            <div>
+                <div id="cat-other" class="divider is-size-4 has-text-centered" style="text-transform: none;"></div>
+            </div>
+        </section>  
+        <section class="section pt-0">
+            <div class="columns body-columns" id="cat-similar">
+                
+
+                <div class="column"></div>
+            </div>
+        </section>
+    </section>
+
+    <section class="section py-0 my-0 has-text-centered is-hidden" id="cat-view">
+
+        <h3 id="cat-title" class="title is-3">#</h3>
+
+            <section id="cat-cols" class="section">
+            </section>
+
+            <nav class="pagination is-centered mt-3 mb-6" role="navigation" aria-label="pagination">
+              <ul class="pagination-list" id="pages">
+              </ul>
+          </nav>
+
+      </section>
+      <footer class="footer">
+          <div class="content has-text-centered">
+            <p>
+              <strong>Nostaljik Gazete Reklamları</strong> bir <a href="https://github.com/yusufb" onclick="gaTrack(1, 'footer_click', '');" target="_blank" class="has-text-weight-medium is-family-code is-underlined">@yusufb</a> hizmetidir.
+          </p>
+      </div>
+    </footer>
+<script async onload="twitterLoaded();" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="newsad.js?v=1" charset="utf-8"></script>
+</body>
+</html>

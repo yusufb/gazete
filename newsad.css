@@ -1,0 +1,48 @@
+body {
+    background-color: #fff9f3;
+}
+
+a, .tag {
+    color: #444 !important;
+}
+
+.tag {
+    background-color: #e3dacf !important;
+}
+
+h1 {
+    font-family: 'Noto Serif', serif !important; 
+    color:#52483c !important;
+    text-shadow: 0px 10px 8px #e2dacf;
+}
+
+h6 {
+    color:#363636b5 !important; 
+    font-family: 'Noto Serif', serif !important;
+}
+
+#detail-img {
+    width: auto !important;
+    box-shadow: 0px 5px 9px 5px #52483c70;
+}
+
+#detail-card, #cat-similar .card, #cat-cols .card {
+    background-color: #fcf7f1;
+}
+
+#detail-view .header {
+    background-color: #52483c !important;
+}
+
+#detail-title {
+    font-family: 'Glory', sans-serif !important; 
+    color:#fff9f3 !important;
+}
+
+.footer {
+    background-color: #F4EDE7;
+}
+
+#rand-button {
+    border: 1px solid #52483c33;
+}
