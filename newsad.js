@@ -97,7 +97,7 @@ function processContent() {
 
         document.getElementById('detail-tweet').innerHTML = '';
         try {
-            document.getElementById('detail-tweet').innerHTML = '<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="'+DATA[context][2] + ' Gazetesi gazetesi ' + DATA[context][3] + ' reklamı (' + DATA[context][1] + ') - '+'" data-lang="tr" data-show-count="false">Tweetle</a>';
+            document.getElementById('detail-tweet').innerHTML = '<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="'+DATA[context][2] + ' Gazetesi ' + DATA[context][3] + ' reklamı (' + DATA[context][1] + ') - '+'" data-lang="tr" data-show-count="false">Tweetle</a>';
             if(typeof twttr !== 'undefined') {
                 twttr.widgets.load(document.getElementById('detail-tweet'));
             }
