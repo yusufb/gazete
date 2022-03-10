@@ -39,7 +39,7 @@ h6 {
     color:#fff9f3 !important;
 }
 
-.footer {
+.footer, #header-title {
     background-color: #F4EDE7;
 }
 
