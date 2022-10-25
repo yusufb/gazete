@@ -10,7 +10,7 @@ const Page = {
 
 var currentPage = Page.RAND;
 var context = null;
-var recentData = getRecentData(4);
+var recentData = getRecentData(5);
 
 function processData() {
     Object.keys(DATA).forEach(i => {
