@@ -120,7 +120,6 @@ function processContent() {
 
         var c = trChars(DATA[context][4]).toLowerCase();
         var randElements = getRandom(CAT_DATA[c], 4);
-        console.log(randElements);
         var similar = document.getElementById('cat-similar');
         similar.innerHTML = '<div class="column"></div>';
         for(var i=0; i<randElements.length; i++) {
