@@ -10,6 +10,7 @@ const Page = {
 
 var currentPage = Page.RAND;
 var context = null;
+var recentData = getRecentData(4);
 
 function processData() {
     Object.keys(DATA).forEach(i => {
@@ -119,12 +120,20 @@ function processContent() {
 
         var c = trChars(DATA[context][4]).toLowerCase();
         var randElements = getRandom(CAT_DATA[c], 4);
+        console.log(randElements);
         var similar = document.getElementById('cat-similar');
         similar.innerHTML = '<div class="column"></div>';
         for(var i=0; i<randElements.length; i++) {
             similar.innerHTML += '<div class="column"> <div class="card"><a onclick="detailContent(\''+context+'\',\''+randElements[i][0]+'\');"><div class="card-image"> <figure class="image is-4by3"> <img src="img/'+randElements[i][1]+'" alt="'+randElements[i][4]+'"> </figure> </div> <div class="card-content"> <div class="content"> <p> <strong>'+randElements[i][4]+'</strong> </p> '+randElements[i][2]+' </div> </div> </a> </div> </div>';
         }
         similar.innerHTML += '<div class="column"></div>';
+
+        var recent = document.getElementById('recent');
+        recent.innerHTML = '<div class="column"></div>';
+        for(var i=0; i<recentData.length; i++) {
+            recent.innerHTML += '<div class="column"> <div class="card"><a onclick="detailContent(\''+context+'\',\''+recentData[i][0]+'\');"><div class="card-image"> <figure class="image is-4by3"> <img src="img/'+recentData[i][1]+'" alt="'+recentData[i][4]+'"> </figure> </div> <div class="card-content"> <div class="content"> <p> <strong>'+recentData[i][4]+'</strong> </p> '+recentData[i][2]+' </div> </div> </a> </div> </div>';
+        }
+        recent.innerHTML += '<div class="column"></div>';
 
         document.getElementById('detail-view').classList.remove('is-hidden');
         gaTrack(2, 'detail', context.toString());
@@ -217,6 +226,17 @@ function getRandom(arr, n) {
         taken[x] = --len in taken ? taken[len] : len;
     }
     return result;
+}
+
+function getRecentData(count) {
+	var recent = [];
+	var dataSize = Object.keys(DATA).length;
+	for(var i=0; i<count; i++) {
+		var d = DATA[dataSize-i];
+		d.unshift((dataSize-i).toString());
+		recent.push(d);
+	}
+	return recent;
 }
 
 function trChars(s) {
