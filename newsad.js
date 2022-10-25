@@ -231,7 +231,7 @@ function getRecentData(count) {
 	var recent = [];
 	var dataSize = Object.keys(DATA).length;
 	for(var i=0; i<count; i++) {
-		var d = DATA[dataSize-i];
+		var d = DATA[dataSize-i].slice(0);
 		d.unshift((dataSize-i).toString());
 		recent.push(d);
 	}
